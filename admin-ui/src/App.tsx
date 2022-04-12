@@ -9,6 +9,14 @@ import { UserList } from "./user/UserList";
 import { UserCreate } from "./user/UserCreate";
 import { UserEdit } from "./user/UserEdit";
 import { UserShow } from "./user/UserShow";
+import { RequestList } from "./request/RequestList";
+import { RequestCreate } from "./request/RequestCreate";
+import { RequestEdit } from "./request/RequestEdit";
+import { RequestShow } from "./request/RequestShow";
+import { LoginList } from "./login/LoginList";
+import { LoginCreate } from "./login/LoginCreate";
+import { LoginEdit } from "./login/LoginEdit";
+import { LoginShow } from "./login/LoginShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -28,7 +36,7 @@ const App = (): React.ReactElement => {
   return (
     <div className="App">
       <Admin
-        title={"My app-1"}
+        title={"APIs"}
         dataProvider={dataProvider}
         authProvider={jwtAuthProvider}
         theme={theme}
@@ -41,6 +49,20 @@ const App = (): React.ReactElement => {
           edit={UserEdit}
           create={UserCreate}
           show={UserShow}
+        />
+        <Resource
+          name="Request"
+          list={RequestList}
+          edit={RequestEdit}
+          create={RequestCreate}
+          show={RequestShow}
+        />
+        <Resource
+          name="Login"
+          list={LoginList}
+          edit={LoginEdit}
+          create={LoginCreate}
+          show={LoginShow}
         />
       </Admin>
     </div>
