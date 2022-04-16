@@ -17,6 +17,10 @@ import { LoginList } from "./login/LoginList";
 import { LoginCreate } from "./login/LoginCreate";
 import { LoginEdit } from "./login/LoginEdit";
 import { LoginShow } from "./login/LoginShow";
+import { WorkflowList } from "./workflow/WorkflowList";
+import { WorkflowCreate } from "./workflow/WorkflowCreate";
+import { WorkflowEdit } from "./workflow/WorkflowEdit";
+import { WorkflowShow } from "./workflow/WorkflowShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -63,6 +67,13 @@ const App = (): React.ReactElement => {
           edit={LoginEdit}
           create={LoginCreate}
           show={LoginShow}
+        />
+        <Resource
+          name="Workflow"
+          list={WorkflowList}
+          edit={WorkflowEdit}
+          create={WorkflowCreate}
+          show={WorkflowShow}
         />
       </Admin>
     </div>

@@ -31,3 +31,9 @@ model Login {
   id        String   @id @default(cuid())
   updatedAt DateTime @updatedAt
 }
+
+model Workflow {
+  createdAt DateTime @default(now())
+  id        String   @id @default(cuid())
+  updatedAt DateTime @updatedAt
+}
