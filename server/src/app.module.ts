@@ -2,6 +2,7 @@ import { Module } from "@nestjs/common";
 import { UserModule } from "./user/user.module";
 import { RequestModule } from "./request/request.module";
 import { LoginModule } from "./login/login.module";
+import { WorkflowModule } from "./workflow/workflow.module";
 import { ACLModule } from "./auth/acl.module";
 import { AuthModule } from "./auth/auth.module";
 import { HealthModule } from "./health/health.module";
@@ -18,6 +19,7 @@ import { GraphQLModule } from "@nestjs/graphql";
     UserModule,
     RequestModule,
     LoginModule,
+    WorkflowModule,
     ACLModule,
     AuthModule,
     HealthModule,
