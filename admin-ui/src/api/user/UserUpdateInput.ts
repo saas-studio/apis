@@ -1,4 +1,5 @@
 import { RequestUpdateManyWithoutUsersInput } from "./RequestUpdateManyWithoutUsersInput";
+import { TaskUpdateManyWithoutUsersInput } from "./TaskUpdateManyWithoutUsersInput";
 
 export type UserUpdateInput = {
   firstName?: string | null;
@@ -6,5 +7,6 @@ export type UserUpdateInput = {
   password?: string;
   requests?: RequestUpdateManyWithoutUsersInput;
   roles?: Array<string>;
+  tasks?: TaskUpdateManyWithoutUsersInput;
   username?: string;
 };

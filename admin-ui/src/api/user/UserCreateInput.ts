@@ -1,4 +1,5 @@
 import { RequestCreateNestedManyWithoutUsersInput } from "./RequestCreateNestedManyWithoutUsersInput";
+import { TaskCreateNestedManyWithoutUsersInput } from "./TaskCreateNestedManyWithoutUsersInput";
 
 export type UserCreateInput = {
   firstName?: string | null;
@@ -6,5 +7,6 @@ export type UserCreateInput = {
   password: string;
   requests?: RequestCreateNestedManyWithoutUsersInput;
   roles: Array<string>;
+  tasks?: TaskCreateNestedManyWithoutUsersInput;
   username: string;
 };
